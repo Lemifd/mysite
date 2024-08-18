@@ -78,7 +78,7 @@
   
   <div class="container"  style="display: flex;justify-content: center;align-items: center;gap: 20px;padding: 50px 30px;">
   
-    <div class="row" style="height: 100%;">
+    <div class="row" style="height: 100%;width: 100%;">
       <div class="col-lg-6 col-sm-12 mx-auto" style="height: 100%;">
         <div style="display: flex;justify-content: center;align-items: center; margin: 10px;">
           <img width="100px" src="images/illustrations/dots-orange.png" alt="bg-shape">
@@ -477,7 +477,7 @@
           </div>
         </article>
       </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+      <div id="hiddens" style="display: none;" class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
         <article class="card shadow">
           <img class="rounded card-img-top" src="images/certificates/msp.png" alt="post-thumb">
           <div class="card-body">
@@ -490,7 +490,7 @@
 
         </article>
       </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+      <div id="hiddens" style="display: none;" class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
         <article class="card shadow">
           <img class="rounded card-img-top" src="images/certificates/organization.png" alt="post-thumb">
           <div class="card-body">
@@ -501,7 +501,7 @@
 
         </article>
       </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+      <div id="hiddens" style="display: none;" class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
         <article class="card shadow">
           <img class="rounded card-img-top" src="images/certificates/NASBA.png" alt="post-thumb">
           <div class="card-body">
@@ -513,8 +513,33 @@
           </div>
         </article>
       </div>
+      <div id="hiddens" style="display: none;" class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+        <article class="card shadow">
+          <img class="rounded card-img-top" src="images/certificates/4n.jpeg" alt="post-thumb">
+          <div class="card-body">
+            <h4 class="card-title">Certificate of Appreciation </h4>
+            <p class="cars-text">Recognizes help provided to the elders of Addis Ababa
+              community with low income in reconstructing severely damaged
+              houses by Addis Ababa University</p>
+          </div>
+
+        </article>
+      </div>
+      <div id="hiddens" style="display: none;" class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+        <article class="card shadow">
+          <img class="rounded card-img-top" src="images/certificates/5.jpeg" alt="post-thumb">
+          <div class="card-body">
+            <h4 class="card-title">Certificate of Participation </h4>
+            <p class="cars-text">Acknowledges participation in community development
+              activities by Arada Subcity Werada 6 Administration</p>
+          </div>
+        </article>
+      </div>
+      
     </div>
   </div>
+  <div  style="display: flex;justify-content: center;align-items: center;"><button  id="morebutton" onclick="morebutton()" class="btn btn-primary">More</button></div>
+  <div style="display: flex;justify-content: center;align-items: center;"><button onclick="lessbutton()"  class="btn btn-primary" id="lessbutton"  style="display: none;">Less</button></div>
 </section>
 
 <section id="contact" class="section section-on-footer" data-background="images/backgrounds/bg-dots.png">
@@ -596,6 +621,23 @@
 
 <script src="js/script.js"></script>
 <script>
+    function morebutton(){
+    document.getElementById("morebutton").style.display="none";
+    document.getElementById("lessbutton").style.display="block";
+    var lists=document.querySelectorAll("#hiddens");
+    for (let index = 0; index < lists.length; index++) {
+      const element =lists[index].style.display="block"   
+    }
+  }
+  function lessbutton(){
+    document.getElementById("morebutton").style.display="block";
+    document.getElementById("lessbutton").style.display="none";
+    var lists=document.querySelectorAll("#hiddens");
+    for (let index = 0; index < lists.length; index++) {
+      const element =lists[index].style.display="none"   
+    }
+  }
+
   function sendEmail() {
     var button = document.getElementById("contact_button");
     button.disabled = true; 
