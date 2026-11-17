@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.sites-runtime/
+.review/
+*.zip
+
+.sites-release/
+
+.env
+.env.*
+!.env.example
+
+# Local migration helpers used during the redesign.
+scripts/refine.mjs
+scripts/finalize-content.mjs
+scripts/enrich-projects.mjs
